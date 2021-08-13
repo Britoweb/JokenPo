@@ -18,7 +18,6 @@ class _JogoState extends State<Jogo> {
         ),
       ),
       body: Column(
-        // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(padding: EdgeInsets.only(top: 32, bottom: 16),
@@ -32,7 +31,11 @@ class _JogoState extends State<Jogo> {
             ),
           ),
 
-          Image.asset("images/padrao.png"),
+          GestureDetector(
+            onTap: () { print( "Um Clique na Imagem" );},
+            onDoubleTap: () { print( "Dois Cliques na Imagem" );},
+            child: Image.asset("images/padrao.png"),
+          ),
           Padding(
             padding: EdgeInsets.only(top: 32, bottom: 16),
             child: Text(
